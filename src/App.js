@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { dataTest } from "./data";
+import React, {useEffect } from 'react';
 
 function App() {
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    console.log(dataTest);
+  });
+
   return (
+ 
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <div className="col-image">
+        <img src="https://images.unsplash.com/photo-1646826795556-7c6c5462bb78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=958&q=80"/>
+        <h2>Be Careful On The Way</h2>
+        <h4>Human</h4>
+        <p>Sincere</p>
+        <button className="btn2">Select</button>
+      </div>
+    </div>
+   
     </div>
   );
 }
