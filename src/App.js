@@ -1,12 +1,40 @@
 import "./App.css";
 import { dataTest } from "./data";
 import React from "react";
-import { Stocks } from "./components";
 
-class Music extends React.Component {
+function App() {
+  return (
+    <div className="App">
+      <div className="page-deets">
+        <h2>Track List</h2>
+      </div>
+      <div className="users">
+        {dataTest.map((dataTest) => (
+          <div key={dataTest.id}>
+            <p>
+              <img
+                key={dataTest.album.id}
+                src={dataTest.album.images[0].url}
+                alt=""
+              />
+            </p>
+            <p>{dataTest.name}</p>
+            <p>{dataTest.album.name}</p>
+            <p>{dataTest.album.release_date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/*class Music extends React.Component {
   render() {
-    const listItem = dataTest.map((dataTest) => (
-      <li key={dataTest.id}> {dataTest.name} </li>
+    const listItem = dataTest.map((dataTest, id) => (
+      <li key={id} url={dataTest.album.images[0].url}>
+        {" "}
+        {dataTest.name}{" "}
+      </li>
     ));
     return (
       <div className="baru">
@@ -15,7 +43,7 @@ class Music extends React.Component {
       </div>
     );
   }
-}
+}*/
 /*}
 function App() {
   useEffect(() => {
@@ -26,4 +54,4 @@ function App() {
   return <Stocks />;
 }*/
 
-export default Music;
+export default App;
