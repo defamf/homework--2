@@ -54,10 +54,10 @@ img {
   color: rgb(31, 31, 31);
 }
 
-.listTrack {
+.list-track {
   text-align: center;
 }
-.listTrack div {
+.list-track div {
   padding: 10px 10px;
   margin: 10px 500px;
   background: rgb(0, 0, 0);

@@ -8,7 +8,7 @@ function App() {
       <div className="page-deets">
         <h2>Track List</h2>
       </div>
-      <div className="listTrack">
+      <div className="list-Track">
         {dataTest.map((dataTest) => (
           <div key={dataTest.id}>
             <p>
