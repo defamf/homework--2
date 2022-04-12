@@ -1,4 +1,6 @@
 import CustomButton from "../customButton";
+import React from "react";
+import { func } from "prop-types";
 import "./index.css";
 
 const CreatePlayListForm = (props) => {
@@ -28,4 +30,9 @@ const CreatePlayListForm = (props) => {
   );
 };
 
+CreatePlayListForm.propTypes = {
+  onSubmit: func,
+  onChangeName: func,
+  onChangeDesc: func,
+};
 export default CreatePlayListForm;
