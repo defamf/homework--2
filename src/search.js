@@ -1,3 +1,5 @@
+import Button from "@mui/material/Button";
+
 function Search() {
   return (
     <div className="App">
@@ -6,9 +8,9 @@ function Search() {
         <form>
           <input type="text" class="searchBar"></input>
         </form>
-        <button type="submit" form="form1" value="Submit">
+        <Button variant="contained" type="submit" form="form1" value="Submit">
           Search
-        </button>
+        </Button>
       </header>
     </div>
   );
